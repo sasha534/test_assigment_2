@@ -10,16 +10,16 @@
 
         <div class="row">
             <div class="form-group">
-                <label for="Task" class="col-sm-3 control-label">Add NEW</label>
+                <label for="Task" class="control-label">Add NEW USER IN TABLE</label>
 
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <input type="text" name="name" id="task-name" class="form-control">
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <input type="text" name="phone" id="task-phone" class="form-control">
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <button type="submit" id="task-button" class="btn btn-success">ADD PHONE</button>
                     </div>
                 </div>
@@ -65,6 +65,9 @@
                                 </button>
                             </form>
                         </td>
+                            <td>
+                                <a href="{{url('api/users/'.$phone_book_user->id)}}">Edit</a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

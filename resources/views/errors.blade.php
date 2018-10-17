@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Саша
- * Date: 17.10.2018
- * Time: 11:29
- */
+@if(count($errors) > 0)
+    <div class="alert alert-danger">
+        <strong>SOME MISTAKE</strong>
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+                @endforeach
+        </ul>
+    </div>
+@endif
